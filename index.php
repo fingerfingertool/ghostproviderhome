@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= SITE_NAME ?> — Domains, Hosting, VPN & Digital Infrastructure</title>
-<meta name="description" content="GhostProvider is a digital services holding: domains, hosting, VPS, VPN, SSL and business email. One account, one invoice, human support.">
+<meta name="description" content="GhostProvider — domains, hosting, VPS, VPN, SSL and business email. One account, one invoice, human support.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
 <body>
 <div class="grain"></div>
 <header class="nav">
-  <a class="brand" href="#"><span class="brand-mark">G</span><span class="brand-word">Ghost<em>Provider</em></span><span class="brand-sub">HOLDING</span></a>
+  <a class="brand" href="#"><span class="brand-mark">G</span><span class="brand-word">Ghost<em>Provider</em></span></a>
   <nav class="links">
     <a href="#services">Services</a><a href="#about">About</a><a href="#network">Network</a><a href="#pricing">Bundles</a><a href="#contact" class="btn small">Get started</a>
   </nav>
@@ -39,9 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
 
 <section class="hero">
   <div class="hero-left">
-    <p class="kicker"><span class="dot"></span> Digital services holding · est. 2019 · 40k+ clients</p>
+    <p class="kicker"><span class="dot"></span> Digital services · est. 2019 · 40k+ clients</p>
     <h1>All your internet,<br><span class="stroke">under one roof.</span></h1>
-    <p class="lede">Domains, hosting, VPS, VPN, SSL and business email — run by one holding, billed on one invoice, answered by one human team. No resellers, no maze.</p>
+    <p class="lede">Domains, hosting, VPS, VPN, SSL and business email — billed on one invoice, answered by one human team. No resellers, no maze.</p>
     <form class="domainbar" action="#pricing" method="get" onsubmit="return domainGo(event)">
       <span class="tld-icon">◈</span>
       <input id="domainInput" type="text" placeholder="Find your domain — try ghoststudio…" aria-label="Domain search">
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
     <p id="domainResult" class="domain-result" role="status"></p>
     <div class="hero-cta">
       <a href="#pricing" class="btn big">Bundle &amp; save 30%</a>
-      <a href="#about" class="ghost-link">What is a holding? ↓</a>
+      <a href="#about" class="ghost-link">Why GhostProvider? ↓</a>
     </div>
     <div class="hero-meta">
       <div><strong>99.99%</strong><span>uptime SLA</span></div>
@@ -82,8 +82,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
   <span>Domains</span><span>Shared Hosting</span><span>VPS &amp; Dedicated</span><span>VPN &amp; Privacy</span><span>SSL Certificates</span><span>Business Email</span><span>Site Care</span>
 </div></div>
 
+<!-- TRUST BLOCK — replace logos / numbers / reviews with your own (same structure as prokban) -->
+<section id="trust" class="section trust">
+  <div class="trust-box">
+    <p class="kicker dark"><span class="dot"></span> Trusted by teams like yours</p>
+    <div class="trust-logos">
+      <span>NordLayer</span><span>Cloudflare</span><span>cPanel</span><span>LiteSpeed</span><span>Let's Encrypt</span><span>WireGuard</span>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-stat"><b>4.9/5</b><span>★ ★ ★ ★ ★ · 2,300+ reviews</span></div>
+      <div class="trust-stat"><b>40k+</b><span>active services worldwide</span></div>
+      <div class="trust-stat"><b>99.99%</b><span>uptime, independently monitored</span></div>
+      <div class="trust-quote">“Moved 12 client sites over a weekend. Zero downtime, support answered in minutes.”<span>— agency owner, Berlin</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="services" class="section">
-  <div class="sec-head"><h2>One holding, six crafts.</h2><p>Each service is its own studio inside the holding — with its own engineers, but one support desk and one bill.</p></div>
+  <div class="sec-head"><h2>One team, six crafts.</h2><p>Each service has its own dedicated engineers — with one support desk and one bill.</p></div>
   <div class="grid">
     <article class="card tall"><div class="tag">01 · Registry</div><h3>Domains</h3><p>400+ TLDs at registry cost, free WHOIS privacy, bulk tools and easy transfers in.</p><div class="price">from <b>$8.49</b>/yr</div><a href="#contact">Claim a domain →</a></article>
     <article class="card"><div class="tag">02 · Cloud</div><h3>Web Hosting</h3><p>NVMe + LiteSpeed, free migration in under 24h, daily backups kept 30 days.</p><div class="price">from <b>$2.99</b>/mo</div><a href="#contact">Start hosting →</a></article>
@@ -96,9 +112,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
 
 <section id="about" class="section about">
   <div class="about-box">
-    <div><p class="kicker dark"><span class="dot"></span> About the holding</p>
-    <h2>We buy the boring,<br>so you skip it.</h2>
-    <p>GhostProvider started as two freelancers reselling hosting. Today we're a small holding company: <strong>GhostDomains, GhostHost, GhostWire VPN</strong> and <strong>GhostCare studio</strong> — four teams, one roof. We own our hardware in 3 data centers and peer directly with registries, so there is no middleman between you and the metal.</p>
+    <div><p class="kicker dark"><span class="dot"></span> About us</p>
+    <h2>We handle the boring,<br>so you skip it.</h2>
+    <p>GhostProvider started as two freelancers reselling hosting. Today we're one team running <strong>domains, hosting, VPN</strong> and <strong>site care</strong> — four groups, one roof. We run our own hardware in 3 data centers and work directly with registries, so there is no middleman between you and the metal.</p>
     <ul class="ticks"><li>✓ One account, one invoice, one support thread</li><li>✓ Real engineers on chat — 24/7, median 14 min reply</li><li>✓ 30-day money-back, no questions, no tickets maze</li></ul></div>
     <div class="stats">
       <div><b data-count="42000">0</b><span>active services</span></div>
@@ -138,7 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
 </section>
 
 <footer><div class="foot">
-  <div><span class="brand-mark">G</span> <b>GhostProvider Holding</b><p>Domains · Hosting · VPS · VPN · SSL · Email<br>© <?= date('Y') ?> GhostProvider. All rights reserved.</p></div>
+  <div><span class="brand-mark">G</span> <b>GhostProvider</b><p>Domains · Hosting · VPS · VPN · SSL · Email<br>© <?= date('Y') ?> GhostProvider. All rights reserved.</p></div>
   <div class="fl"><a href="#services">Services</a><a href="#about">About</a><a href="#pricing">Bundles</a><a href="#contact">Contact</a></div>
 </div></footer>
 <script src="assets/app.js"></script>
