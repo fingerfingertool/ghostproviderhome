@@ -82,19 +82,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
   <span>Domains</span><span>Shared Hosting</span><span>VPS &amp; Dedicated</span><span>VPN &amp; Privacy</span><span>SSL Certificates</span><span>Business Email</span><span>Site Care</span>
 </div></div>
 
-<!-- TRUST BLOCK — replace logos / numbers / reviews with your own (same structure as prokban) -->
-<section id="trust" class="section trust">
-  <div class="trust-box">
-    <p class="kicker dark"><span class="dot"></span> Trusted by teams like yours</p>
-    <div class="trust-logos">
-      <span>NordLayer</span><span>Cloudflare</span><span>cPanel</span><span>LiteSpeed</span><span>Let's Encrypt</span><span>WireGuard</span>
-    </div>
-    <div class="trust-grid">
-      <div class="trust-stat"><b>4.9/5</b><span>★ ★ ★ ★ ★ · 2,300+ reviews</span></div>
-      <div class="trust-stat"><b>40k+</b><span>active services worldwide</span></div>
-      <div class="trust-stat"><b>99.99%</b><span>uptime, independently monitored</span></div>
-      <div class="trust-quote">“Moved 12 client sites over a weekend. Zero downtime, support answered in minutes.”<span>— agency owner, Berlin</span></div>
-    </div>
+<!-- TRUST BLOCK — exact copy of reference; replace content later -->
+<section id="trust" class="trust-strip">
+  <div class="trust-col">
+    <p class="t-rank">Ranked #1</p>
+    <div class="t-stars blue">★★★★★</div>
+    <p class="t-logo usa"><span class="usa-dot"></span>USA TODAY</p>
+    <p class="t-sub">2023, 2024 &amp; 2025</p>
+  </div>
+  <div class="trust-col">
+    <p class="t-rank">Ranked #1</p>
+    <div class="t-stars gold">★★★★★</div>
+    <p class="t-logo forbes">Forbes</p>
+    <p class="t-sub">2025 &amp; 2026</p>
+  </div>
+  <div class="trust-col">
+    <p class="t-rank tp"><span class="tp-star">★</span>Trustpilot</p>
+    <div class="t-squares"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+    <p class="t-sub left">TrustScore 4.9<br><u><b>27,161</b> reviews</u></p>
+  </div>
+  <div class="trust-col">
+    <p class="t-rank">4.8 stars</p>
+    <div class="t-stars fb">★★★★<span class="half">★</span></div>
+    <p class="t-logo facebook">facebook</p>
   </div>
 </section>
 
