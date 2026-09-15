@@ -39,39 +39,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
 
 <section class="hero">
   <div class="hero-left">
-    <p class="kicker"><span class="dot"></span> Digital services · est. 2019 · 40k+ clients</p>
-    <h1>All your internet,<br><span class="stroke">under one roof.</span></h1>
-    <p class="lede">Domains, hosting, VPS, VPN, SSL and business email — billed on one invoice, answered by one human team. No resellers, no maze.</p>
+    <p class="kicker"><span class="dot"></span> Friendly support · since 2019 · 40,000+ happy customers</p>
+    <h1>Your website, email &amp; privacy — <span class="warm">simply taken care of.</span></h1>
+    <p class="lede">Domain, hosting, email, security and VPN in one friendly place. One account, one bill, and real humans who reply in minutes — no tech skills needed.</p>
     <form class="domainbar" action="#pricing" method="get" onsubmit="return domainGo(event)">
       <span class="tld-icon">◈</span>
-      <input id="domainInput" type="text" placeholder="Find your domain — try ghoststudio…" aria-label="Domain search">
+      <input id="domainInput" type="text" placeholder="Pick your name — like sunnyside…" aria-label="Domain search">
       <select aria-label="TLD"><option>.com</option><option>.net</option><option>.io</option><option>.co</option><option>.dev</option></select>
       <button type="submit">Search</button>
     </form>
     <p id="domainResult" class="domain-result" role="status"></p>
     <div class="hero-cta">
-      <a href="#pricing" class="btn big">Bundle &amp; save 30%</a>
-      <a href="#about" class="ghost-link">Why GhostProvider? ↓</a>
+      <a href="#pricing" class="btn big">See simple plans</a>
+      <a href="#about" class="ghost-link">How we help ↓</a>
     </div>
     <div class="hero-meta">
-      <div><strong>99.99%</strong><span>uptime SLA</span></div>
-      <div><strong>14 min</strong><span>median support reply</span></div>
-      <div><strong>32</strong><span>edge locations</span></div>
+      <div><strong>30-day</strong><span>money-back promise</span></div>
+      <div><strong>14 min</strong><span>friendly reply time</span></div>
+      <div><strong>24/7</strong><span>real human help</span></div>
     </div>
   </div>
   <div class="hero-right">
-    <div class="terminal">
-      <div class="term-bar"><i></i><i></i><i></i><span>ghostprovider — live status</span></div>
-      <pre id="termBody"><span class="g">$</span> ghost deploy --prod
-<span class="ok">✓</span> dns propagated · 32/32 edges · 41ms
-<span class="g">$</span> ghost ssl --issue shop.io
-<span class="ok">✓</span> certificate active · auto-renew on
-<span class="g">$</span> ghost vpn --connect frankfurt-04
-<span class="ok">✓</span> wireguard tunnel · 890 Mbps<span class="caret">▌</span></pre>
-      <div class="term-cards">
-        <div class="mini"><b>Hosting</b><span class="up">● operational</span></div>
-        <div class="mini"><b>VPN nodes</b><span class="up">● 32 online</span></div>
-        <div class="mini"><b>Registry</b><span class="up">● connected</span></div>
+    <div class="care-card">
+      <div class="care-head"><span class="avatar">A</span><div><b>Anna from support</b><span>online now · replies in ~14 min</span></div><span class="online">●</span></div>
+      <div class="chat">
+        <p class="bubble in">Hi! I just bought a domain — what now? 🙂</p>
+        <p class="bubble out">Hi Emma! We connected it to hosting, added SSL and email for you. All done ✓</p>
+        <p class="bubble in">Wow, that was fast. Thank you!</p>
+      </div>
+      <div class="care-list">
+        <div><i>✓</i> Free move of your site in 24h</div>
+        <div><i>✓</i> SSL + backups included</div>
+        <div><i>✓</i> We set up your email for you</div>
       </div>
     </div>
   </div>
