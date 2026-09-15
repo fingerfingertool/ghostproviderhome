@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
     <button type="submit">Search</button>
   </form>
   <p id="domainResult" class="result" role="status"></p>
-  <p class="hint">Free help moving your site · 30-day money-back promise</p>
+  <p class="hint">Free help moving your site · 30-day money-back promise · Crypto payments only</p>
 </section>
 
 <!-- TRUST BLOCK — exact copy of reference; replace content later -->
@@ -66,6 +66,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
     <div class="plan hot"><h3>Plus</h3><p class="amt">$11.90<span>/mo</span></p><p>Everything plus email and VPN. Most popular.</p><a class="btn" href="#contact">Choose Plus</a></div>
     <div class="plan"><h3>Pro</h3><p class="amt">$29<span>/mo</span></p><p> Faster server and personal help.</p><a class="btn ghost" href="#contact">Choose Pro</a></div>
   </div>
+</section>
+
+<section id="pay" class="section narrow pay">
+  <h2>Pay with crypto. Nothing else.</h2>
+  <p>We accept <b>BTC, ETH, USDT and LTC</b> — no cards, no banks, no hassle. You get an invoice with a wallet address, pay, and your service activates after one confirmation.</p>
 </section>
 
 <section id="about" class="section narrow">

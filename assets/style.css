@@ -31,6 +31,7 @@ h1,h2,h3{font-family:Sora,sans-serif;line-height:1.2;letter-spacing:-.01em}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.plan{border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--paper)}.plan.hot{background:var(--sea);color:#fff;border-color:var(--sea)}.plan.hot .btn{background:var(--amber);color:#1a2530!important}
 .amt{font-family:Sora;font-size:34px;font-weight:700;margin:8px 0}.amt span{font-size:14px;font-weight:400;opacity:.6}
 .narrow{max-width:640px}
+.pay{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin-top:8px}
 .form{display:grid;gap:10px;margin-top:16px}.form input,.form textarea{border:1px solid var(--line);border-radius:14px;padding:13px;font-size:15px;background:#fff;width:100%}
 .ok{background:#e3f5e9;padding:12px;border-radius:12px}.err{background:#fde8e8;padding:12px;border-radius:12px}
 footer{text-align:center;color:var(--mut);font-size:14px;padding:28px;border-top:1px solid var(--line)}
