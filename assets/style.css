@@ -35,6 +35,13 @@ h1,h2,h3{font-family:Sora,sans-serif;line-height:1.2;letter-spacing:-.01em}
 .form{display:grid;gap:10px;margin-top:16px}.form input,.form textarea{border:1px solid var(--line);border-radius:14px;padding:13px;font-size:15px;background:#fff;width:100%}
 .ok{background:#e3f5e9;padding:12px;border-radius:12px}.err{background:#fde8e8;padding:12px;border-radius:12px}
 footer{text-align:center;color:var(--mut);font-size:14px;padding:28px;border-top:1px solid var(--line)}
+.steps{color:var(--mut);font-size:13px;letter-spacing:.04em}
+.plans.col{display:grid;gap:12px;grid-template-columns:1fr}
+.coins{display:grid;gap:10px;margin-top:16px}
+.coin{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer}
+.coin b{font-family:Sora}.coin span{color:var(--mut);font-size:14px}
+.invoice{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;display:grid;gap:12px;justify-items:center;text-align:center}
+.addr{font-family:monospace;font-size:13px;word-break:break-all;background:var(--paper);padding:10px 14px;border-radius:10px}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 @media(max-width:800px){.trust-strip,.plans{grid-template-columns:1fr 1fr}.row{flex-direction:column;align-items:start}.nav nav a:not(.btn){display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}

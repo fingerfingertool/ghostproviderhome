@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
 <body>
 <header class="nav">
   <a class="brand" href="#"><span class="mark">G</span>GhostProvider</a>
-  <nav><a href="#services">Services</a><a href="#plans">Plans</a><a href="#about">About</a><a class="btn" href="#contact">Get started</a></nav>
+  <nav><a href="#services">Services</a><a href="#plans">Plans</a><a href="#about">About</a><a class="btn" href="checkout.php">Get started</a></nav>
 </header>
 
 <main>
@@ -62,9 +62,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
 <section id="plans" class="section tint">
   <h2>Simple plans.</h2>
   <div class="plans">
-    <div class="plan"><h3>Start</h3><p class="amt">$4.90<span>/mo</span></p><p>Domain, hosting and SSL for a first site.</p><a class="btn ghost" href="#contact">Choose Start</a></div>
-    <div class="plan hot"><h3>Plus</h3><p class="amt">$11.90<span>/mo</span></p><p>Everything plus email and VPN. Most popular.</p><a class="btn" href="#contact">Choose Plus</a></div>
-    <div class="plan"><h3>Pro</h3><p class="amt">$29<span>/mo</span></p><p> Faster server and personal help.</p><a class="btn ghost" href="#contact">Choose Pro</a></div>
+    <div class="plan"><h3>Start</h3><p class="amt">$4.90<span>/mo</span></p><p>Domain, hosting and SSL for a first site.</p><a class="btn ghost" href="checkout.php?step=details&amp;plan=start">Choose Start</a></div>
+    <div class="plan hot"><h3>Plus</h3><p class="amt">$11.90<span>/mo</span></p><p>Everything plus email and VPN. Most popular.</p><a class="btn" href="checkout.php?step=details&amp;plan=plus">Choose Plus</a></div>
+    <div class="plan"><h3>Pro</h3><p class="amt">$29<span>/mo</span></p><p> Faster server and personal help.</p><a class="btn ghost" href="checkout.php?step=details&amp;plan=pro">Choose Pro</a></div>
   </div>
 </section>
 
