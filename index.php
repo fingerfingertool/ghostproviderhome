@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
 <body>
 <header class="nav">
   <a class="brand" href="#"><span class="mark">G</span>GhostProvider</a>
-  <nav><a href="#services">Services</a><a href="#plans">Plans</a><a href="#about">About</a><a class="btn" href="checkout.php">Get started</a></nav>
+  <nav><a href="#services">Services</a><a href="#plans">Plans</a><a href="#about">About</a><a href="cart.php">Cart<span class="cartCount"></span></a><a class="btn" href="checkout.php">Get started</a></nav>
 </header>
 
 <main>
@@ -39,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact'])) {
     <button type="submit">Search</button>
   </form>
   <p id="domainResult" class="result" role="status"></p>
+  <div id="domainResults" class="dresults"></div>
   <p class="hint">Free help moving your site · 30-day money-back promise · Crypto payments only</p>
 </section>
 

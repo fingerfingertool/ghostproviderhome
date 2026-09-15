@@ -36,6 +36,14 @@ h1,h2,h3{font-family:Sora,sans-serif;line-height:1.2;letter-spacing:-.01em}
 .ok{background:#e3f5e9;padding:12px;border-radius:12px}.err{background:#fde8e8;padding:12px;border-radius:12px}
 footer{text-align:center;color:var(--mut);font-size:14px;padding:28px;border-top:1px solid var(--line)}
 .steps{color:var(--mut);font-size:13px;letter-spacing:.04em}
+.dresults{display:grid;gap:8px;margin-top:14px;text-align:left}
+.drow{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;display:flex;gap:10px;align-items:center}
+.drow.taken{opacity:.6}
+.dname{font-weight:700;flex:1}
+.dprice{color:var(--mut);font-size:14px}
+.drow button{background:var(--sea);color:#fff;border:0;border-radius:100px;padding:8px 16px;cursor:pointer;font-weight:600}
+.dtaken{color:#a00;font-size:13px}
+.dfoot{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:6px;flex-wrap:wrap}
 .plans.col{display:grid;gap:12px;grid-template-columns:1fr}
 .coins{display:grid;gap:10px;margin-top:16px}
 .coin{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer}
