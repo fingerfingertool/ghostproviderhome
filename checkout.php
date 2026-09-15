@@ -84,16 +84,10 @@ $q = fn($s) => htmlspecialchars($s, ENT_QUOTES);
   </form>
 
 <?php elseif ($step === 'invoice'): ?>
-  <h1>Send <?= $amount ?> <?= $q($coinKey) ?>.</h1>
-  <p class="lede">Order <b><?= $q($orderId ?? '') ?></b> · <?= $q($plan['name']) ?> — $<?= number_format($plan['price'], 2) ?> · to <?= $q($email) ?></p>
-  <div class="invoice">
-    <img src="<?= $q($qr) ?>" alt="Payment QR" width="220" height="220">
-    <p class="addr"><?= $q($coin['wallet']) ?></p>
-    <p class="hint">Amount: <b><?= $amount ?> <?= $q($coinKey) ?></b> · one confirmation activates your service. Sent to <?= $q($email) ?>.</p>
-    <button class="btn" onclick="navigator.clipboard.writeText('<?= $q($coin['wallet']) ?>');this.textContent='Copied ✓'">Copy address</button>
-    <a class="btn ghost" href="checkout.php?step=done&amp;plan=<?= $q($planKey) ?>&amp;coin=<?= $q($coinKey) ?>&amp;email=<?= urlencode($email) ?>&amp;order=<?= $q($orderId ?? '') ?>&amp;paid=1">I've paid →</a>
-  </div>
-  <p class="hint">Demo wallets — replace with yours in config.php. For live auto-confirmation connect BTCPay Server.</p>
+  <?php
+  $qs = http_build_query(['plan' => $planKey, 'coin' => $coinKey, 'email' => $email, 'domain' => $domain, 'order' => $orderId ?? ('GP-' . strtoupper(substr(md5(($email ?: 'guest') . $planKey . time()), 0, 8)))]);
+  header('Location: pay.php?' . $qs); exit;
+  ?>
 
 <?php else: ?>
   <h1>Thanks — we're on it. ✓</h1>
