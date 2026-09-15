@@ -13,13 +13,13 @@ $uri = ($schemes[$coinKey] ?? strtolower($coinKey)) . ':' . $coin['wallet'] . '?
 $qr = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' . urlencode($uri);
 $q = fn($s) => htmlspecialchars($s, ENT_QUOTES);
 $wallets = [
-  ['Trust Wallet', 1, 'T', '#1a56db'],
-  ['Base Pay', 0, 'B', '#0000ff'],
-  ['MetaMask', 0, 'M', '#f6851b'],
-  ['Phantom', 0, 'P', '#ab9ff2'],
-  ['Rabby', 0, 'R', '#7d8bff'],
-  ['Rainbow', 0, 'R', '#001aff'],
-  ['OKX Wallet', 0, 'O', '#000000'],
+  ['Trust Wallet', 'trustwallet', 'T', '#1a56db'],
+  ['Base Pay', 'basepay', 'B', '#0000ff'],
+  ['MetaMask', 'metamask', 'M', '#f6851b'],
+  ['Phantom', 'phantom', 'P', '#ab9ff2'],
+  ['Rabby', 'rabby', 'R', '#7d8bff'],
+  ['Rainbow', 'rainbow', 'R', '#001aff'],
+  ['OKX Wallet', 'okx', 'O', '#000000'],
 ];
 ?>
 <!DOCTYPE html>
@@ -54,9 +54,9 @@ $wallets = [
 <div class="wcard">
   <div class="wleft"><h3>Select a wallet</h3><div id="wlist">
     <?php foreach ($wallets as $i => $w): ?>
-    <button class="witem <?= $i === 0 ? 'active' : '' ?>" data-w="<?= $q($w[0]) ?>">
+    <button class="witem <?= $i === 0 ? 'active' : '' ?>" data-w="<?= $q($w[0]) ?>" data-detect="<?= $q($w[1]) ?>">
       <span class="ic" style="background:<?= $q($w[3]) ?>"><?= $q($w[2]) ?></span>
-      <span><?= $q($w[0]) ?><?= $w[1] ? '<small>Installed</small>' : '' ?><?= $w[0] === 'Base Pay' ? '' : '' ?></span>
+      <span><?= $q($w[0]) ?><small class="inst" hidden>Installed</small></span>
     </button>
     <?php endforeach; ?>
     <button class="witem" data-w="Other wallets"><span class="ic" style="background:#fff;border:1px solid #ccc;color:#333">▭</span><span>Other wallets<br><span class="sub">480+ wallets via WalletConnect</span></span></button>
@@ -71,6 +71,19 @@ $wallets = [
   </div>
 </div>
 <script>
+// Real detection of injected wallet providers. No extension = no badge.
+const found = {
+  trustwallet: !!(window.trustwallet || (window.ethereum && window.ethereum.isTrust)),
+  metamask: !!(window.ethereum && window.ethereum.isMetaMask),
+  phantom: !!(window.phantom || window.solana),
+  rabby: !!(window.ethereum && window.ethereum.isRabby),
+  rainbow: !!(window.ethereum && window.ethereum.isRainbow),
+  okx: !!(window.okxwallet),
+  basepay: !!(window.ethereum && window.ethereum.isBasePay)
+};
+document.querySelectorAll('.witem[data-detect]').forEach(b => {
+  if (found[b.dataset.detect]) b.querySelector('.inst').hidden = false;
+});
 document.querySelectorAll('.witem').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('.witem').forEach(x => x.classList.remove('active'));
   b.classList.add('active');
